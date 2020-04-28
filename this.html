@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>this is not confused anyone!</h1>
+    <p onclick="this.innerText = 'You clicked' "> Click Me here Paragraph. Don't Click me!</p>
+    <script>
+        const myObj = {
+            name: 'Tom John',
+            getFullName: function () {
+                console.log(this);
+                return 'Mr.' + this.name;
+            }
+        }
+        myObj.getFullName();
+
+        const anotherObj = {
+            name: 'Bear Gail',
+            age: 21,
+        }
+        setTimeout(function () {
+            console.log(this)
+        }, 1000)
+    </script>
+</body>
+
+</html>
